@@ -1,10 +1,9 @@
-module Go-Project
+module docker-api
 
 go 1.17
 
 require (
 	github.com/docker/docker v20.10.11+incompatible
-	github.com/gorilla/mux v1.8.0
 )
 
 require (
