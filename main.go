@@ -18,6 +18,11 @@ func main() {
 	}
 	log.Printf("server is listening at %s...", listenAddress)
 	router := gin.Default()
+	router.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "OK",
+		})
+	})
 	router.GET("/containers", func(c *gin.Context) {
 		containers, err := getContainers()
 		if err != nil {
