@@ -4,6 +4,8 @@ go 1.17
 
 require (
 	github.com/docker/docker v20.10.11+incompatible
+	github.com/gin-contrib/cors v1.3.1
+	github.com/gin-gonic/gin v1.7.7
 )
 
 require (
@@ -13,7 +15,6 @@ require (
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.7.7 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.9.0 // indirect

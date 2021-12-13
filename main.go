@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -18,6 +19,11 @@ func main() {
 	}
 	log.Printf("server is listening at %s...", listenAddress)
 	router := gin.Default()
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	router.Use(cors.New(config))
+
+	//router.Use(cors.New(config))
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "OK",
